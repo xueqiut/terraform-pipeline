@@ -41,10 +41,11 @@ jobs:
     - name: Terraform format
       id: fmt
       run: |
-        echo "current dir: " && pwd
-        ls -al
         echo "TF version: " && terraform -version
         terraform fmt -check
+        if [ $? -ne 0 ]; then
+          echo "terraform fmt failed"
+          exit 1
     
     - name: terraform validate
       id: validate
