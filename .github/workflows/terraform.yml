@@ -41,9 +41,9 @@ jobs:
     - name: Terraform format
       id: fmt
       run: |
-        echo "current dir:" && pwd
+        echo "current dir: " && pwd
         ls -al
-        cd ./terraform
+        echo "TF version: " && terraform -version
         terraform fmt -check
     
     - name: terraform validate
