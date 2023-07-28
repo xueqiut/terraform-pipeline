@@ -7,8 +7,8 @@ terraform {
   }
 
   backend "s3" {
-    bucket  = "terraform-state-management-axeisie7ze"
-    key     = "learn-terraform-module-object-attributes-s3/terraform.tfstate"
+    bucket  = "terraform-backend-yahthie0th"
+    key     = "terraform.tfstate"
     region  = "us-east-1"
     encrypt = true
   }
