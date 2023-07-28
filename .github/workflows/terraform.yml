@@ -45,6 +45,7 @@ jobs:
         if [ $? -ne 0 ]; then
           echo "terraform fmt failed"
           exit 1
+        fi
     
     - name: terraform validate
       id: validate
