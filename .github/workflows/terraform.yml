@@ -11,6 +11,7 @@ on:
     - main
     paths:
     - 'terraform/**'
+  workflow_dispatch:
 
 env:
   TF_LOG: INFO
@@ -54,7 +55,7 @@ jobs:
       if: github.event_name == 'pull_request'
       run: terraform plan -no-color -input=false
       continue-on-error: true
-      
+
     - uses: actions/github-script@v6
       if: github.event_name == 'pull_request'
       env:
