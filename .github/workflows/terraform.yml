@@ -37,10 +37,13 @@ jobs:
       uses: hashicorp/setup-terraform@v2
       with:
         terraform_version: 1.5.4
-      
+    
     - name: Terraform format
       id: fmt
-      run: terraform fmt -check
+      run: |
+        pwd
+        cd ./terraform
+        terraform fmt -check
     
     - name: terraform validate
       id: validate
