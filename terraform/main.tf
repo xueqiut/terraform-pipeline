@@ -5,13 +5,13 @@ terraform {
       version = "~> 5.10.0"
     }
   }
-}
-
-backend "s3" {
-  bucket         = "terraform-state-management-axeisie7ze"
-  key            = "learn-terraform-module-object-attributes-s3/terraform.tfstate"
-  region         = "us-east-1"
-  encrypt        = true
+  
+  backend "s3" {
+    bucket         = "terraform-state-management-axeisie7ze"
+    key            = "learn-terraform-module-object-attributes-s3/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+  }
 }
 
 provider "aws" {
