@@ -41,7 +41,8 @@ jobs:
     - name: Terraform format
       id: fmt
       run: |
-        pwd
+        echo "current dir:" && pwd
+        ls -al
         cd ./terraform
         terraform fmt -check
     
